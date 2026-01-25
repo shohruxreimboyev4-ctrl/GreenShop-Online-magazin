@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Image, Rate } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
@@ -22,12 +22,6 @@ const ProductPage = () => {
     url: `flower/category/${category}/${id}`,
     pathname: `product-details-${id}`,
   });
-
-  useEffect(() => {
-    if (product?.main_image) {
-      setSelectedImage(product.main_image);
-    }
-  }, [product]);
 
   if (isLoading)
     return <div className="flex justify-center mt-20">{cateGoryLoader()}</div>;

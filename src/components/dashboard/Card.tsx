@@ -12,7 +12,7 @@ const Card = ({ product }: { product: ProductType }) => {
   };
 
   return (
-    <div className="group">
+    <div className="group cursor-pointer">
       <div
         onClick={() => {
   
@@ -23,8 +23,8 @@ const Card = ({ product }: { product: ProductType }) => {
         className="
           relative w-full h-[300px] bg-[#f2f2f2]
           flex items-center justify-center
-          overflow-hidden transition-all duration-300
-          group-hover:border-t-[2px] group-hover:border-[#46A358]
+          overflow-hidden transition-all duration-300 ease-in-out
+          group-hover:border-t-[2px] group-hover:border-[#46A358] group-hover:shadow-lg
         "
       >
         <img
