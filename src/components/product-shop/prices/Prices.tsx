@@ -1,8 +1,14 @@
 import { useSelector } from "react-redux";
 import type { ShopCartType } from "../../../@types/AuthType";
 
+interface ShopState {
+  shopSlice: {
+    data: ShopCartType[];
+  };
+}
+
 const Prices = () => {
-  const shopState = useSelector((state: any) => state.shopSlice);
+  const shopState = useSelector((state: ShopState) => state.shopSlice);
 
   const data: ShopCartType[] = shopState?.data || [];
 
